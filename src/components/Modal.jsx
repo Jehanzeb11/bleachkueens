@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 
+// eslint-disable-next-line react/prop-types
 export default function Modal({ open, setOpen }) {
 
   return (

@@ -1,5 +1,14 @@
-import React from "react";
 import card1Img from "../assets/main-card-1.gif";
+import card2Img from "../assets/main-card-2.gif";
+import card3Img from "../assets/main-card-3.gif";
+import card4Img from "../assets/main-card-4.gif";
+import card5Img from "../assets/main-card-5.gif";
+import card6Img from "../assets/main-card-6.gif";
+import card7Img from "../assets/main-card-7.gif";
+import card8Img from "../assets/main-card-8.gif";
+import card9Img from "../assets/main-card-9.gif";
+import card10Img from "../assets/main-card-10.gif";
+import card11Img from "../assets/main-card-11.gif";
 
 // do not delete this code
 
@@ -128,32 +137,154 @@ import card1Img from "../assets/main-card-1.gif";
 }
 
 const MainLineup = () => {
+
+  const cardContent = [
+    {
+      id: 0,
+      title: "Orihime Inoue",
+      description: "Learn more about the DJ here!",
+      badge: "Turntablist",
+      image: card1Img
+    },
+    {
+      id: 1,
+      title: "Yoruichi Shihouin",
+      badge: "Drummer",
+      description: "Learn more about the Drummer here!",
+      image: card2Img
+    },
+    {
+      id: 2,
+      title: "Mila Rose",
+      badge: "Bassist",
+      description: "Learn more about the Bassist here!",
+      image: card3Img
+    },
+    {
+      id: 3,
+      title: "Zabimaru",
+      badge: "Percussion+Dance",
+      description: "Learn more about the multi-role musician here!",
+      image: card4Img
+    },
+    {
+      id: 4,
+      title: "Emilou Apacci",
+      badge: "Lead Guitarist",
+      description: "Learn more about the lead guitarist here!",
+      image: card5Img
+    },
+    {
+      id: 5,
+      title: "Jackie Tristan",
+      badge: "Keyboard/Periphreals",
+      description: "Learn more about the Keyboardist here!",
+      image: card6Img
+    },
+    {
+      id: 6,
+      title: "Rangiku",
+      badge: "Percussion+Dance",
+      description: "Learn more about the multi-role musician here!",
+      image: card7Img
+    },
+    {
+      id: 7,
+      title: "Soifon",
+      badge: "Rhythym Guitarist",
+      description: "Learn more about the rhythym guitarist here!",
+      image: card8Img
+    },
+    {
+      id: 8,
+      title: "Tia Harribel",
+      badge: "Singer+Dancer",
+      description: "Learn more about the Lead Singer & Dancer here!",
+      image: card9Img
+    },
+
+  ]
+
+
   return (
-    <div className='py-8 bg-primary min-h-screen w-full'>
+    <div className='py-8 bg-primary/80 min-h-screen w-full'>
+
       <p className='text-white text-center'>Creativity Awaits</p>
 
       <h4 className='text-white text-6xl mt-3 text-center font-bold'>
         Meet the Main Line Up!
       </h4>
-      <div className='flex justify-center items-center'>
-        <div className='container flex flex-wrap'>
-          <div className='relative w-96 h-52 rounded-lg overflow-hidden shadow-lg'>
-            <div className='absolute bg-gradient-to-t from-orange-400 to-transparent top-0 z-10'></div>
+      <div className='flex justify-center items-center mt-20 p-4'>
+        <div className='container flex flex-wrap gap-10 justify-center'>
+          {cardContent.map((card) => (
+
+            <div className='relative w-80 h-48 rounded-2xl overflow-hidden shadow-lg group' key={card.id}>
+              <div className='absolute bg-gradient-to-t from-primary/95 to-transparent h-full w-full top-0 z-10'></div>
+              <img
+                src={card.image}
+                alt='Orihime Inoue'
+                className='absolute w-full h-full object-cover opacity-90 transition-transform duration-300 ease-in-out group-hover:scale-125'
+              />
+              <div className='relative p-4 flex justify-between'>
+                <h2 className='text-white text-3xl font-bold w-[120px] h-20'>{card.title}</h2>
+                <p className='inline-block mt-2 h-fit bg-purple-600 text-white text-xs font-semibold rounded-full px-2 py-1'>
+                  {card.badge} (#{card.id})
+                </p>
+              </div>
+              <div className="relative p-4 w-full">
+                <p className='mt-4 text-purple-500 text-lg z-20 absolute top-0'>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+
+          <div className='relative w-80 h-96 rounded-2xl overflow-hidden shadow-lg group'>
+            <div className='absolute bg-gradient-to-t from-orange-400/95 to-transparent h-full w-full top-0 z-10'></div>
             <img
-              src={card1Img}
+              src={card10Img}
               alt='Orihime Inoue'
-              className='absolute w-full h-full object-cover opacity-60'
+              className='absolute w-full h-full object-cover opacity-90 transition-transform duration-300 ease-in-out group-hover:scale-125'
             />
-            <div className='relative p-4'>
-              <h2 className='text-white text-lg font-bold'>Orihime Inoue</h2>
-              <span className='inline-block mt-2 bg-purple-600 text-white text-xs font-semibold rounded-full px-2 py-1'>
-                Turntablist (#0)
-              </span>
-              <p className='mt-4 text-blue-200 text-sm'>
-                Learn more about the DJ here!
+            <div className="absolute bottom-10 w-full z-20">
+              <div className='relative p-4 flex justify-between'>
+                <h2 className='text-white text-3xl font-bold w-[120px] h-20'>Lisa Yadomaru</h2>
+                <p className='inline-block mt-2 h-fit bg-purple-600 text-white text-xs font-semibold rounded-full px-2 py-1'>
+                  Producer
+                </p>
+              </div>
+              <div className="relative p-4 w-full">
+                <p className='mt-4 text-purple-500 text-lg z-20 absolute top-0'>
+                  Learn more about the Producer here!
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div className='relative w-80 h-48 rounded-2xl overflow-hidden shadow-lg group'>
+            <div className='absolute bg-gradient-to-t from-orange-400/95 to-transparent h-full w-full top-0 z-10'></div>
+            <img
+              src={card11Img}
+              alt='Orihime Inoue'
+              className='absolute w-full h-full object-cover opacity-90 transition-transform duration-300 ease-in-out group-hover:scale-125'
+            />
+            <div className='relative p-4 flex justify-between'>
+              <h2 className='text-white text-3xl font-bold w-[120px] h-20'>The Original Line Up + Other</h2>
+              <p className='inline-block mt-2 h-fit bg-purple-600 text-white text-xs font-semibold rounded-full px-2 py-1'>
+                Various Characters
+
+
+
+              </p>
+            </div>
+            <div className="relative p-4 w-full">
+              <p className='mt-4 text-purple-500 text-lg z-20 absolute top-0'>
+                Learn more about the rest of the cast here!
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../assets/logo.gif";
 import { IoCloseSharp, IoMenu } from "react-icons/io5";
 
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className='w-full fixed top-0 z-20 bg-transparent'>
+      <header className='w-full fixed top-0 z-40 bg-transparent'>
         <nav className='grid grid-cols-12 sm:px-3 px-1 sm:mt-5 mt-2 items-center '>
           <div className='xl:col-span-4 sm:col-span-6 col-span-10 bg-black bg-opacity-40 rounded-3xl h-fit p-4 flex gap-3 items-center'>
             <img src={Logo} alt='logo' className='md:w-14 w-8' />
@@ -76,7 +76,7 @@ const Navbar = () => {
               </button>
             </div>
             <div className='overflow-y-scroll h-full'>
-              <ul className='text-white text-center mt-12 lg:gap-4 gap-2 text-2xl flex justify-center flex-col items-center font-semibold w-full'>
+              <ul className='text-white text-center mt-12 lg:gap-8 gap-4 text-2xl flex justify-center flex-col items-center font-semibold w-full'>
                 {navLinks.map((link, index) => (
                   <li
                     className='capitalize md:text-lg text-base rounded hover:text-primary transition-colors duration-300 ease-in-out text-white font-semibold w-full'
